@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #000000;
+  --color-surface: #111111;
+  --color-accent: #ffffff;
+}
+
+/*@layer base {*/
+/*  body {*/
+/*    background-color: black;*/
+/*    color: white;*/
+/*    -webkit-font-smoothing: antialiased;*/
+/*  }*/
+/*}*/
+
+/* Базовые настройки для всего сайта */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-black text-white antialiased;
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Убираем ограничения Vite по умолчанию */
+  #root {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left; /* В шаблоне был center, нам это не нужно для лендинга */
+  }
+}
+
+/* Утилита для кнопок в стиле референса */
+@layer components {
+  .btn-primary {
+    @apply bg-white text-black px-8 py-4 uppercase font-bold tracking-widest transition-all hover:bg-gray-200 active:scale-95 inline-block text-center;
+  }
+}
