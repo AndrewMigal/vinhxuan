@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import emailjs from '@emailjs/browser'
 
 function RegisterPage() {
   const [formData, setFormData] = useState({
@@ -10,6 +11,9 @@ function RegisterPage() {
     message: ''
   })
 
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState(null) // 'success' | 'error' | null
+
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData(prev => ({
@@ -18,10 +22,58 @@ function RegisterPage() {
     }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    alert('Спасибо за регистрацию! Мы свяжемся с вами в ближайшее время.')
+
+    // Reset status
+    setSubmitStatus(null)
+    setIsSubmitting(true)
+
+    // Map experience to Russian labels for email
+    const experienceLabels = {
+      beginner: 'Начинающий',
+      intermediate: 'Средний',
+      advanced: 'Продвинутый'
+    }
+
+    // Prepare template parameters
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      from_phone: formData.phone,
+      experience_level: experienceLabels[formData.experience],
+      message: formData.message || 'Нет дополнительной информации'
+    }
+
+    try {
+      // Send email via EmailJS
+      const response = await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+
+      console.log('Email sent successfully:', response.status, response.text)
+
+      // Success state
+      setSubmitStatus('success')
+
+      // Reset form after successful submission
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        experience: 'beginner',
+        message: ''
+      })
+
+    } catch (error) {
+      console.error('Email sending failed:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -134,10 +186,33 @@ function RegisterPage() {
 
             <button
               type="submit"
-              className="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+              disabled={isSubmitting}
+              className={`w-full py-3 rounded-lg font-semibold transition-colors ${
+                isSubmitting
+                  ? 'bg-gray-400 cursor-not-allowed'
+                  : 'bg-indigo-600 hover:bg-indigo-700'
+              } text-white`}
             >
-              Отправить заявку
+              {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
             </button>
+
+            {/* Success Message */}
+            {submitStatus === 'success' && (
+              <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
+                <p className="text-green-800 text-center">
+                  Спасибо за регистрацию! Мы свяжемся с вами в ближайшее время.
+                </p>
+              </div>
+            )}
+
+            {/* Error Message */}
+            {submitStatus === 'error' && (
+              <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+                <p className="text-red-800 text-center">
+                  Произошла ошибка при отправке. Пожалуйста, попробуйте позже или свяжитесь с нами напрямую.
+                </p>
+              </div>
+            )}
           </form>
         </div>
       </main>
