@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
 import Header from '../components/Header'
+import { useLanguage } from '../contexts/LanguageContext'
 
 function RegisterPage() {
+  const { t } = useLanguage()
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -29,11 +32,11 @@ function RegisterPage() {
     setSubmitStatus(null)
     setIsSubmitting(true)
 
-    // Map experience to Russian labels for email
+    // Map experience to localized labels for email
     const experienceLabels = {
-      beginner: 'Начинающий',
-      intermediate: 'Средний',
-      advanced: 'Продвинутый'
+      beginner: t('beginner'),
+      intermediate: t('intermediate'),
+      advanced: t('advanced')
     }
 
     // Prepare template parameters
@@ -42,7 +45,7 @@ function RegisterPage() {
       from_email: formData.email,
       from_phone: formData.phone,
       experience_level: experienceLabels[formData.experience],
-      message: formData.message || 'Нет дополнительной информации'
+      message: formData.message || t('noAdditionalInfo')
     }
 
     try {
@@ -83,16 +86,16 @@ function RegisterPage() {
       <main className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <div className="bg-white rounded-2xl shadow-xl p-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            Запись на обучение
+            {t('registerTitle')}
           </h1>
           <p className="text-gray-600 mb-8">
-            Заполните форму, и мы свяжемся с вами для подбора удобного времени
+            {t('registerSubtitle')}
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                Имя *
+                {t('name')} *
               </label>
               <input
                 type="text"
@@ -102,13 +105,12 @@ function RegisterPage() {
                 value={formData.name}
                 onChange={handleChange}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition"
-                placeholder="Ваше имя"
               />
             </div>
 
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                Email *
+                {t('email')} *
               </label>
               <input
                 type="email"
@@ -124,7 +126,7 @@ function RegisterPage() {
 
             <div>
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                Телефон *
+                {t('phone')} *
               </label>
               <input
                 type="tel"
@@ -134,13 +136,12 @@ function RegisterPage() {
                 value={formData.phone}
                 onChange={handleChange}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition"
-                placeholder="+7 (999) 123-45-67"
               />
             </div>
 
             <div>
               <label htmlFor="experience" className="block text-sm font-medium text-gray-700 mb-2">
-                Уровень подготовки
+                {t('experienceLevel')}
               </label>
               <select
                 id="experience"
@@ -149,15 +150,15 @@ function RegisterPage() {
                 onChange={handleChange}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition"
               >
-                <option value="beginner">Начинающий</option>
-                <option value="intermediate">Средний</option>
-                <option value="advanced">Продвинутый</option>
+                <option value="beginner">{t('beginner')}</option>
+                <option value="intermediate">{t('intermediate')}</option>
+                <option value="advanced">{t('advanced')}</option>
               </select>
             </div>
 
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                Дополнительная информация
+                {t('additionalInfo')}
               </label>
               <textarea
                 id="message"
@@ -166,7 +167,6 @@ function RegisterPage() {
                 value={formData.message}
                 onChange={handleChange}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition resize-none"
-                placeholder="Расскажите о себе, своих целях и ожиданиях от обучения..."
               ></textarea>
             </div>
 
@@ -179,14 +179,14 @@ function RegisterPage() {
                   : 'bg-indigo-600 hover:bg-indigo-700'
               } text-white`}
             >
-              {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
+              {isSubmitting ? '...' : t('submit')}
             </button>
 
             {/* Success Message */}
             {submitStatus === 'success' && (
               <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
                 <p className="text-green-800 text-center">
-                  Спасибо за регистрацию! Мы свяжемся с вами в ближайшее время.
+                  {t('successMessage')}
                 </p>
               </div>
             )}
@@ -195,7 +195,7 @@ function RegisterPage() {
             {submitStatus === 'error' && (
               <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
                 <p className="text-red-800 text-center">
-                  Произошла ошибка при отправке. Пожалуйста, попробуйте позже или свяжитесь с нами напрямую.
+                  {t('errorMessage')}
                 </p>
               </div>
             )}

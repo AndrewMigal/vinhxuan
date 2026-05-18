@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../contexts/LanguageContext'
 
 function Header() {
+  const { language, setLanguage, t } = useLanguage()
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -30,14 +32,14 @@ function Header() {
               onClick={() => scrollToSection('home')}
               className="text-gray-700 hover:text-indigo-600 transition-colors font-medium"
             >
-              Home
+              {t('home')}
             </button>
 
             <button
               onClick={() => scrollToSection('services')}
               className="text-gray-700 hover:text-indigo-600 transition-colors font-medium"
             >
-              Services
+              {t('services')}
             </button>
 
             {/* Social Media Links */}
@@ -72,15 +74,33 @@ function Header() {
               onClick={() => scrollToSection('blog')}
               className="text-gray-700 hover:text-indigo-600 transition-colors font-medium"
             >
-              Blog
+              {t('blog')}
             </button>
+
+            {/* Language Switcher */}
+            <div className="flex items-center gap-2 border-l border-gray-300 pl-4">
+              <button
+                onClick={() => setLanguage('en')}
+                className={`text-2xl transition-opacity ${language === 'en' ? 'opacity-100' : 'opacity-40 hover:opacity-70'}`}
+                title="English"
+              >
+                🇬🇧
+              </button>
+              <button
+                onClick={() => setLanguage('pl')}
+                className={`text-2xl transition-opacity ${language === 'pl' ? 'opacity-100' : 'opacity-40 hover:opacity-70'}`}
+                title="Polski"
+              >
+                🇵🇱
+              </button>
+            </div>
 
             {/* CTA Button */}
             <Link
               to="/register"
               className="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors font-semibold"
             >
-              Записаться
+              {t('register')}
             </Link>
           </div>
 
