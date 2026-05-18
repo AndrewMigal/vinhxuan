@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import emailjs from '@emailjs/browser'
+import Header from '../components/Header'
 
 function RegisterPage() {
   const [formData, setFormData] = useState({
@@ -78,23 +78,9 @@ function RegisterPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-100">
-      <nav className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16 items-center">
-            <Link to="/" className="text-2xl font-bold text-indigo-600">
-              VinhXuan
-            </Link>
-            <Link
-              to="/"
-              className="text-gray-600 hover:text-indigo-600 transition-colors"
-            >
-              Вернуться на главную
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Header />
 
-      <main className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <div className="bg-white rounded-2xl shadow-xl p-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
             Запись на обучение
