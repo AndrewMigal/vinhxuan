@@ -74,7 +74,15 @@ export const translations = {
     backToHome: 'Back to Home',
     successMessage: 'Thank you for registration! We will contact you soon.',
     errorMessage: 'Error sending form. Please try again.',
-    noAdditionalInfo: 'No additional information'
+    noAdditionalInfo: 'No additional information',
+
+    // Blog Detail Page
+    publishedOn: 'Published on',
+    by: 'By',
+    readTime: 'min read',
+    previousArticle: 'Previous Article',
+    nextArticle: 'Next Article',
+    articleNotFound: 'Article not found',
   },
   pl: {
     // Header
@@ -147,7 +155,15 @@ export const translations = {
     backToHome: 'Powrót do strony głównej',
     successMessage: 'Dziękujemy za rejestrację! Skontaktujemy się z Tobą wkrótce.',
     errorMessage: 'Błąd podczas wysyłania formularza. Spróbuj ponownie.',
-    noAdditionalInfo: 'Brak dodatkowych informacji'
+    noAdditionalInfo: 'Brak dodatkowych informacji',
+
+    // Blog Detail Page
+    publishedOn: 'Opublikowano',
+    by: 'Autor',
+    readTime: 'min czytania',
+    previousArticle: 'Poprzedni artykuł',
+    nextArticle: 'Następny artykuł',
+    articleNotFound: 'Artykuł nie znaleziony',
   }
 }
 

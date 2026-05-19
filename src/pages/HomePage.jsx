@@ -227,38 +227,38 @@ function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: t('blogPost1Title'), desc: t('blogPost1Desc'), gradient: 'from-zinc-900 to-zinc-800' },
-              { title: t('blogPost2Title'), desc: t('blogPost2Desc'), gradient: 'from-zinc-800 to-zinc-700' },
-              { title: t('blogPost3Title'), desc: t('blogPost3Desc'), gradient: 'from-zinc-700 to-zinc-600' }
+              { slug: 'history-of-wing-chun', title: t('blogPost1Title'), desc: t('blogPost1Desc'), gradient: 'from-zinc-900 to-zinc-800' },
+              { slug: 'breathing-techniques', title: t('blogPost2Title'), desc: t('blogPost2Desc'), gradient: 'from-zinc-800 to-zinc-700' },
+              { slug: 'philosophy-of-martial-arts', title: t('blogPost3Title'), desc: t('blogPost3Desc'), gradient: 'from-zinc-700 to-zinc-600' }
             ].map((post, idx) => (
-              <article
+              <Link
                 key={idx}
-                className="group bg-black border border-zinc-800 overflow-hidden hover:border-red-600 transition-all duration-300 hover:-translate-y-2"
+                to={`/blog/${post.slug}`}
+                className="block group bg-black border border-zinc-800 overflow-hidden hover:border-red-600 transition-all duration-300 hover:-translate-y-2 cursor-pointer"
               >
-                <div className={`h-56 bg-gradient-to-br ${post.gradient} relative overflow-hidden`}>
-                  {/* Decorative overlay */}
-                  <div className="absolute inset-0 bg-red-600/0 group-hover:bg-red-600/20 transition-all duration-500"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-8xl font-bold text-white/5">武</div>
+                <article>
+                  <div className={`h-56 bg-gradient-to-br ${post.gradient} relative overflow-hidden`}>
+                    {/* Decorative overlay */}
+                    <div className="absolute inset-0 bg-red-600/0 group-hover:bg-red-600/20 transition-all duration-500"></div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-8xl font-bold text-white/5">武</div>
+                    </div>
                   </div>
-                </div>
 
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
-                    {post.title}
-                  </h3>
-                  <p className="text-zinc-400 mb-4 leading-relaxed">
-                    {post.desc}
-                  </p>
-                  <a
-                    href="#"
-                    className="inline-flex items-center gap-2 text-red-500 hover:text-red-400 font-medium group/link"
-                  >
-                    {t('readMore')}
-                    <span className="group-hover/link:translate-x-1 transition-transform">→</span>
-                  </a>
-                </div>
-              </article>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
+                      {post.title}
+                    </h3>
+                    <p className="text-zinc-400 mb-4 leading-relaxed">
+                      {post.desc}
+                    </p>
+                    <span className="inline-flex items-center gap-2 text-red-500 hover:text-red-400 font-medium">
+                      {t('readMore')}
+                      <span className="group-hover:translate-x-1 transition-transform">→</span>
+                    </span>
+                  </div>
+                </article>
+              </Link>
             ))}
           </div>
         </div>

@@ -1,9 +1,12 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { useLanguage } from '../contexts/LanguageContext'
 import logo from '../assets/logo.png' // Измените на .svg если у вас SVG файл
 
 function Header() {
   const { language, setLanguage, t } = useLanguage()
+  const navigate = useNavigate()
+  const location = useLocation()
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -15,6 +18,15 @@ function Header() {
         top: offsetPosition,
         behavior: 'smooth'
       })
+    }
+  }
+
+  const handleBlogClick = () => {
+    if (location.pathname === '/') {
+      scrollToSection('blog')
+    } else {
+      navigate('/')
+      setTimeout(() => scrollToSection('blog'), 100)
     }
   }
 
@@ -73,7 +85,7 @@ function Header() {
             </a>
 
             <button
-              onClick={() => scrollToSection('blog')}
+              onClick={handleBlogClick}
               className="text-gray-300 hover:text-white transition-colors font-medium"
             >
               {t('blog')}
