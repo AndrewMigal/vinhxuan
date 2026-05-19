@@ -30,6 +30,23 @@ function Header() {
     }
   }
 
+  const handleHomeClick = () => {
+    if (location.pathname === '/') {
+      scrollToSection('home')
+    } else {
+      navigate('/')
+    }
+  }
+
+  const handleServicesClick = () => {
+    if (location.pathname === '/') {
+      scrollToSection('services')
+    } else {
+      navigate('/')
+      setTimeout(() => scrollToSection('services'), 100)
+    }
+  }
+
   return (
     <header className="fixed top-0 left-0 right-0 bg-black text-white shadow-lg z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,14 +60,14 @@ function Header() {
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
             <button
-              onClick={() => scrollToSection('home')}
+              onClick={handleHomeClick}
               className="text-gray-300 hover:text-white transition-colors font-medium"
             >
               {t('home')}
             </button>
 
             <button
-              onClick={() => scrollToSection('services')}
+              onClick={handleServicesClick}
               className="text-gray-300 hover:text-white transition-colors font-medium"
             >
               {t('services')}
