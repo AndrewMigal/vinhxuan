@@ -48,11 +48,11 @@ function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-black text-white shadow-lg z-50">
+    <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md border-b border-zinc-200 shadow-sm z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 text-white hover:text-gray-300 transition-colors">
+          <Link to="/" className="flex items-center gap-3 text-zinc-900 hover:text-zinc-700 transition-colors">
             <img src={logo} alt="Yuen Chai Wan Wing Chun Logo" className="h-16 w-auto" />
             <span className="text-2xl font-bold">Yuen Chai Wan Wing Chun</span>
           </Link>
@@ -61,14 +61,14 @@ function Header() {
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={handleHomeClick}
-              className="text-gray-300 hover:text-white transition-colors font-medium"
+              className="text-zinc-600 hover:text-zinc-900 transition-colors font-medium"
             >
               {t('home')}
             </button>
 
             <button
               onClick={handleServicesClick}
-              className="text-gray-300 hover:text-white transition-colors font-medium"
+              className="text-zinc-600 hover:text-zinc-900 transition-colors font-medium"
             >
               {t('services')}
             </button>
@@ -78,7 +78,7 @@ function Header() {
               href="https://youtube.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-white transition-colors font-medium"
+              className="text-zinc-600 hover:text-zinc-900 transition-colors font-medium"
             >
               YouTube
             </a>
@@ -87,7 +87,7 @@ function Header() {
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-white transition-colors font-medium"
+              className="text-zinc-600 hover:text-zinc-900 transition-colors font-medium"
             >
               Facebook
             </a>
@@ -96,20 +96,20 @@ function Header() {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-white transition-colors font-medium"
+              className="text-zinc-600 hover:text-zinc-900 transition-colors font-medium"
             >
               Instagram
             </a>
 
             <button
               onClick={handleBlogClick}
-              className="text-gray-300 hover:text-white transition-colors font-medium"
+              className="text-zinc-600 hover:text-zinc-900 transition-colors font-medium"
             >
               {t('blog')}
             </button>
 
             {/* Language Switcher */}
-            <div className="flex items-center gap-2 border-l border-gray-700 pl-4">
+            <div className="flex items-center gap-2 border-l border-zinc-300 pl-4">
               <button
                 onClick={() => setLanguage('en')}
                 className={`text-2xl transition-opacity ${language === 'en' ? 'opacity-100' : 'opacity-40 hover:opacity-70'}`}
@@ -129,14 +129,14 @@ function Header() {
             {/* CTA Button */}
             <Link
               to="/register"
-              className="bg-white text-black px-6 py-2 rounded-lg hover:bg-gray-200 transition-colors font-semibold"
+              className="bg-zinc-900 text-white px-6 py-2 rounded-lg hover:bg-zinc-800 transition-colors font-semibold"
             >
               {t('register')}
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden text-white">
+          <button className="md:hidden text-zinc-900">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>

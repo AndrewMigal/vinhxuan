@@ -73,18 +73,18 @@ function RegisterPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-950 via-black to-zinc-900">
+    <div className="min-h-screen bg-gradient-to-br from-zinc-50 via-white to-zinc-100">
       <Header />
 
       {/* Decorative background elements */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-20 right-10 w-96 h-96 bg-red-600/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-10 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 right-10 w-96 h-96 bg-zinc-900/5 rounded-full"></div>
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-zinc-900/5 rounded-full"></div>
 
         <svg className="absolute top-40 left-0 w-64 h-64 opacity-5" viewBox="0 0 200 200">
           <path
             d="M20,100 Q60,40 100,60 T180,120"
-            stroke="white"
+            stroke="#171717"
             strokeWidth="30"
             fill="none"
             strokeLinecap="round"
@@ -97,15 +97,15 @@ function RegisterPage() {
           {/* Left side - Info panel */}
           <div className="lg:col-span-2 space-y-6">
             <div>
-              <div className="w-12 h-1 bg-red-600 mb-6"></div>
+              <div className="w-12 h-1 bg-zinc-900 mb-6"></div>
               <h1
-                className="text-5xl font-bold text-white mb-4 leading-tight"
+                className="text-5xl font-bold text-zinc-900 mb-4 leading-tight"
                 style={{ fontFamily: '"Bebas Neue", "Impact", sans-serif' }}
               >
                 {t('registerTitle')}
               </h1>
-              <div className="w-24 h-0.5 bg-gradient-to-r from-red-600 to-transparent mb-6"></div>
-              <p className="text-zinc-400 text-lg leading-relaxed">
+              <div className="w-24 h-0.5 bg-gradient-to-r from-zinc-900 to-transparent mb-6"></div>
+              <p className="text-zinc-600 text-lg leading-relaxed">
                 {t('registerSubtitle')}
               </p>
             </div>
@@ -113,7 +113,7 @@ function RegisterPage() {
             {/* Decorative Chinese character */}
             <div className="hidden lg:block pt-12">
               <div
-                className="text-9xl font-bold text-white/5 select-none"
+                className="text-9xl font-bold text-zinc-900/5 select-none"
                 style={{
                   fontFamily: 'serif',
                   writingMode: 'vertical-rl',
@@ -127,9 +127,9 @@ function RegisterPage() {
 
           {/* Right side - Form */}
           <div className="lg:col-span-3">
-            <div className="relative bg-gradient-to-br from-zinc-900/80 to-zinc-950/80 backdrop-blur-sm border border-zinc-800 p-8 lg:p-10">
+            <div className="relative bg-white shadow-xl border border-zinc-200 p-8 lg:p-10">
               {/* Top accent line */}
-              <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-red-600 via-red-600/50 to-transparent"></div>
+              <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-zinc-900 via-zinc-900/50 to-transparent"></div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name field */}
@@ -137,7 +137,7 @@ function RegisterPage() {
                   <label
                     htmlFor="name"
                     className={`block text-sm font-semibold mb-2 transition-colors ${
-                      focusedField === 'name' ? 'text-red-500' : 'text-zinc-400'
+                      focusedField === 'name' ? 'text-zinc-700' : 'text-zinc-700'
                     }`}
                     style={{ fontFamily: '"Bebas Neue", sans-serif', letterSpacing: '0.05em' }}
                   >
@@ -152,11 +152,11 @@ function RegisterPage() {
                     onChange={handleChange}
                     onFocus={() => setFocusedField('name')}
                     onBlur={() => setFocusedField(null)}
-                    className="w-full px-4 py-3 bg-black/50 border border-zinc-700 text-white placeholder-zinc-600 focus:border-red-600 focus:outline-none transition-all"
+                    className="w-full px-4 py-3 bg-white border border-zinc-300 text-zinc-900 placeholder-zinc-400 focus:border-zinc-900 focus:bg-zinc-50 focus:outline-none transition-all"
                     style={{ clipPath: 'polygon(0 0, 100% 0, 98% 100%, 0% 100%)' }}
                   />
                   <div
-                    className={`absolute bottom-0 left-0 h-0.5 bg-red-600 transition-all duration-300 ${
+                    className={`absolute bottom-0 left-0 h-0.5 bg-zinc-900 transition-all duration-300 ${
                       focusedField === 'name' ? 'w-full' : 'w-0'
                     }`}
                   ></div>
@@ -167,7 +167,7 @@ function RegisterPage() {
                   <label
                     htmlFor="email"
                     className={`block text-sm font-semibold mb-2 transition-colors ${
-                      focusedField === 'email' ? 'text-red-500' : 'text-zinc-400'
+                      focusedField === 'email' ? 'text-zinc-700' : 'text-zinc-700'
                     }`}
                     style={{ fontFamily: '"Bebas Neue", sans-serif', letterSpacing: '0.05em' }}
                   >
@@ -182,12 +182,12 @@ function RegisterPage() {
                     onChange={handleChange}
                     onFocus={() => setFocusedField('email')}
                     onBlur={() => setFocusedField(null)}
-                    className="w-full px-4 py-3 bg-black/50 border border-zinc-700 text-white placeholder-zinc-600 focus:border-red-600 focus:outline-none transition-all"
+                    className="w-full px-4 py-3 bg-white border border-zinc-300 text-zinc-900 placeholder-zinc-400 focus:border-zinc-900 focus:bg-zinc-50 focus:outline-none transition-all"
                     style={{ clipPath: 'polygon(0 0, 100% 0, 98% 100%, 0% 100%)' }}
                     placeholder="example@email.com"
                   />
                   <div
-                    className={`absolute bottom-0 left-0 h-0.5 bg-red-600 transition-all duration-300 ${
+                    className={`absolute bottom-0 left-0 h-0.5 bg-zinc-900 transition-all duration-300 ${
                       focusedField === 'email' ? 'w-full' : 'w-0'
                     }`}
                   ></div>
@@ -198,7 +198,7 @@ function RegisterPage() {
                   <label
                     htmlFor="phone"
                     className={`block text-sm font-semibold mb-2 transition-colors ${
-                      focusedField === 'phone' ? 'text-red-500' : 'text-zinc-400'
+                      focusedField === 'phone' ? 'text-zinc-700' : 'text-zinc-700'
                     }`}
                     style={{ fontFamily: '"Bebas Neue", sans-serif', letterSpacing: '0.05em' }}
                   >
@@ -213,11 +213,11 @@ function RegisterPage() {
                     onChange={handleChange}
                     onFocus={() => setFocusedField('phone')}
                     onBlur={() => setFocusedField(null)}
-                    className="w-full px-4 py-3 bg-black/50 border border-zinc-700 text-white placeholder-zinc-600 focus:border-red-600 focus:outline-none transition-all"
+                    className="w-full px-4 py-3 bg-white border border-zinc-300 text-zinc-900 placeholder-zinc-400 focus:border-zinc-900 focus:bg-zinc-50 focus:outline-none transition-all"
                     style={{ clipPath: 'polygon(0 0, 100% 0, 98% 100%, 0% 100%)' }}
                   />
                   <div
-                    className={`absolute bottom-0 left-0 h-0.5 bg-red-600 transition-all duration-300 ${
+                    className={`absolute bottom-0 left-0 h-0.5 bg-zinc-900 transition-all duration-300 ${
                       focusedField === 'phone' ? 'w-full' : 'w-0'
                     }`}
                   ></div>
@@ -228,7 +228,7 @@ function RegisterPage() {
                   <label
                     htmlFor="experience"
                     className={`block text-sm font-semibold mb-2 transition-colors ${
-                      focusedField === 'experience' ? 'text-red-500' : 'text-zinc-400'
+                      focusedField === 'experience' ? 'text-zinc-700' : 'text-zinc-700'
                     }`}
                     style={{ fontFamily: '"Bebas Neue", sans-serif', letterSpacing: '0.05em' }}
                   >
@@ -241,16 +241,16 @@ function RegisterPage() {
                     onChange={handleChange}
                     onFocus={() => setFocusedField('experience')}
                     onBlur={() => setFocusedField(null)}
-                    className="w-full px-4 py-3 bg-black/50 border border-zinc-700 text-white focus:border-red-600 focus:outline-none transition-all appearance-none cursor-pointer"
+                    className="w-full px-4 py-3 bg-white border border-zinc-300 text-zinc-900 focus:border-zinc-900 focus:bg-zinc-50 focus:outline-none transition-all appearance-none cursor-pointer"
                     style={{ clipPath: 'polygon(0 0, 100% 0, 98% 100%, 0% 100%)' }}
                   >
                     <option value="beginner">{t('beginner')}</option>
                     <option value="intermediate">{t('intermediate')}</option>
                     <option value="advanced">{t('advanced')}</option>
                   </select>
-                  <div className="absolute right-4 top-[42px] pointer-events-none text-red-600">▼</div>
+                  <div className="absolute right-4 top-[42px] pointer-events-none text-zinc-900">▼</div>
                   <div
-                    className={`absolute bottom-0 left-0 h-0.5 bg-red-600 transition-all duration-300 ${
+                    className={`absolute bottom-0 left-0 h-0.5 bg-zinc-900 transition-all duration-300 ${
                       focusedField === 'experience' ? 'w-full' : 'w-0'
                     }`}
                   ></div>
@@ -261,7 +261,7 @@ function RegisterPage() {
                   <label
                     htmlFor="message"
                     className={`block text-sm font-semibold mb-2 transition-colors ${
-                      focusedField === 'message' ? 'text-red-500' : 'text-zinc-400'
+                      focusedField === 'message' ? 'text-zinc-700' : 'text-zinc-700'
                     }`}
                     style={{ fontFamily: '"Bebas Neue", sans-serif', letterSpacing: '0.05em' }}
                   >
@@ -275,11 +275,11 @@ function RegisterPage() {
                     onChange={handleChange}
                     onFocus={() => setFocusedField('message')}
                     onBlur={() => setFocusedField(null)}
-                    className="w-full px-4 py-3 bg-black/50 border border-zinc-700 text-white placeholder-zinc-600 focus:border-red-600 focus:outline-none transition-all resize-none"
+                    className="w-full px-4 py-3 bg-white border border-zinc-300 text-zinc-900 placeholder-zinc-400 focus:border-zinc-900 focus:bg-zinc-50 focus:outline-none transition-all resize-none"
                     style={{ clipPath: 'polygon(0 0, 100% 0, 98% 100%, 0% 100%)' }}
                   ></textarea>
                   <div
-                    className={`absolute bottom-0 left-0 h-0.5 bg-red-600 transition-all duration-300 ${
+                    className={`absolute bottom-0 left-0 h-0.5 bg-zinc-900 transition-all duration-300 ${
                       focusedField === 'message' ? 'w-full' : 'w-0'
                     }`}
                   ></div>
@@ -292,7 +292,7 @@ function RegisterPage() {
                   className={`group relative w-full py-4 font-bold text-lg overflow-hidden transition-all ${
                     isSubmitting
                       ? 'bg-zinc-800 cursor-not-allowed text-zinc-500'
-                      : 'bg-red-600 hover:bg-red-700 text-white hover:scale-[1.02]'
+                      : 'bg-zinc-900 hover:bg-zinc-800 text-white hover:scale-[1.02]'
                   }`}
                   style={{
                     clipPath: 'polygon(0 0, 100% 0, 97% 100%, 0% 100%)',
@@ -304,16 +304,16 @@ function RegisterPage() {
                     {isSubmitting ? '...' : t('submit')}
                   </span>
                   {!isSubmitting && (
-                    <div className="absolute inset-0 bg-gradient-to-r from-red-700 to-red-600 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-zinc-800 to-zinc-900 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
                   )}
                 </button>
 
                 {/* Success Message */}
                 {submitStatus === 'success' && (
-                  <div className="relative p-6 bg-gradient-to-r from-green-900/30 to-green-800/30 border-l-4 border-green-500 animate-fade-in">
+                  <div className="relative p-6 bg-green-50 border-l-4 border-green-500 animate-fade-in">
                     <div className="flex items-center gap-3">
                       <div className="text-2xl text-green-500">✓</div>
-                      <p className="text-green-300 font-medium">
+                      <p className="text-green-700 font-medium">
                         {t('successMessage')}
                       </p>
                     </div>
@@ -322,10 +322,10 @@ function RegisterPage() {
 
                 {/* Error Message */}
                 {submitStatus === 'error' && (
-                  <div className="relative p-6 bg-gradient-to-r from-red-900/30 to-red-800/30 border-l-4 border-red-500 animate-fade-in">
+                  <div className="relative p-6 bg-zinc-100 border-l-4 border-zinc-700 animate-fade-in">
                     <div className="flex items-center gap-3">
-                      <div className="text-2xl text-red-500">✗</div>
-                      <p className="text-red-300 font-medium">
+                      <div className="text-2xl text-zinc-700">✗</div>
+                      <p className="text-zinc-800 font-medium">
                         {t('errorMessage')}
                       </p>
                     </div>
@@ -334,7 +334,7 @@ function RegisterPage() {
               </form>
 
               {/* Bottom corner accent */}
-              <div className="absolute bottom-0 right-0 w-0 h-0 border-b-[60px] border-b-red-600/20 border-l-[60px] border-l-transparent"></div>
+              <div className="absolute bottom-0 right-0 w-0 h-0 border-b-[60px] border-b-zinc-900/20 border-l-[60px] border-l-transparent"></div>
             </div>
           </div>
         </div>

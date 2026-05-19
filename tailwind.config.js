@@ -7,11 +7,11 @@ export default {
     theme: {
         extend: {
             colors: {
-                // Чистый черный и оттенки для карточек/разделителей
-                background: "#000000",
-                surface: "#111111", // Для блоков, которые чуть светлее фона
-                // Акценты
-                accent: "#ffffff",
+                // Светлые оттенки для Minimalist Japan темы
+                background: "#FAFAFA",
+                surface: "#F5F5F5",
+                accent: "#0A0A0A",
+                paper: "#FFFFFF",
             },
             fontFamily: {
                 // Если захочешь подключить строгий шрифт через Google Fonts
