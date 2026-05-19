@@ -11,14 +11,14 @@ export const translations = {
     register: 'Register',
 
     // Home Page Hero
-    welcomeTitle: 'Welcome to VinhXuan',
-    welcomeSubtitle: 'Discover the ancient art of Vietnamese martial arts. Begin your journey to perfection of body and spirit.',
+    welcomeTitle: 'Welcome to Yuen Chai Wan Wing Chun',
+    welcomeSubtitle: 'Discover the ancient art of Yuen Chai Wan Wing Chun. Begin your journey to perfection of body and spirit.',
     startTraining: 'Start Training',
     learnMore: 'Learn More',
 
     // Home Features
     traditions: 'Traditions',
-    traditionsDesc: 'Learn ancient techniques passed down through generations',
+    traditionsDesc: 'Learn ancient Wing Chun techniques passed down through generations',
     strength: 'Strength',
     strengthDesc: 'Develop physical strength and endurance through practice',
     balance: 'Balance',
@@ -47,8 +47,8 @@ export const translations = {
 
     // Blog Section
     blogTitle: 'Blog',
-    blogPost1Title: 'History of Vinh Xuan',
-    blogPost1Desc: 'Learn about the ancient roots and development of Vietnamese martial arts over the centuries.',
+    blogPost1Title: 'History of Wing Chun',
+    blogPost1Desc: 'Learn about the ancient roots and development of Wing Chun martial arts over the centuries.',
     blogPost2Title: 'Breathing Techniques',
     blogPost2Desc: 'Proper breathing is the foundation of effective practice. Study the basic techniques and exercises.',
     blogPost3Title: 'Philosophy of Martial Arts',
@@ -57,7 +57,7 @@ export const translations = {
 
     // Footer
     footerTagline: 'The path to perfection of body and spirit',
-    copyright: '© 2024 VinhXuan. All rights reserved.',
+    copyright: '© 2024 Yuen Chai Wan Wing Chun. All rights reserved.',
 
     // Register Page
     registerTitle: 'Register for Classes',
@@ -84,14 +84,14 @@ export const translations = {
     register: 'Zapisz się',
 
     // Home Page Hero
-    welcomeTitle: 'Witamy w VinhXuan',
-    welcomeSubtitle: 'Odkryj starożytną sztukę wietnamskich sztuk walki. Rozpocznij swoją podróż do doskonałości ciała i ducha.',
+    welcomeTitle: 'Witamy w Yuen Chai Wan Wing Chun',
+    welcomeSubtitle: 'Odkryj starożytną sztukę Yuen Chai Wan Wing Chun. Rozpocznij swoją podróż do doskonałości ciała i ducha.',
     startTraining: 'Rozpocznij trening',
     learnMore: 'Dowiedz się więcej',
 
     // Home Features
     traditions: 'Tradycje',
-    traditionsDesc: 'Naucz się starożytnych technik przekazywanych przez pokolenia',
+    traditionsDesc: 'Naucz się starożytnych technik Wing Chun przekazywanych przez pokolenia',
     strength: 'Siła',
     strengthDesc: 'Rozwijaj siłę fizyczną i wytrzymałość poprzez praktykę',
     balance: 'Równowaga',
@@ -120,8 +120,8 @@ export const translations = {
 
     // Blog Section
     blogTitle: 'Blog',
-    blogPost1Title: 'Historia Vinh Xuan',
-    blogPost1Desc: 'Dowiedz się o starożytnych korzeniach i rozwoju wietnamskich sztuk walki na przestrzeni wieków.',
+    blogPost1Title: 'Historia Wing Chun',
+    blogPost1Desc: 'Dowiedz się o starożytnych korzeniach i rozwoju Wing Chun na przestrzeni wieków.',
     blogPost2Title: 'Techniki Oddychania',
     blogPost2Desc: 'Prawidłowe oddychanie jest podstawą efektywnej praktyki. Poznaj podstawowe techniki i ćwiczenia.',
     blogPost3Title: 'Filozofia Sztuk Walki',
@@ -130,7 +130,7 @@ export const translations = {
 
     // Footer
     footerTagline: 'Droga do doskonałości ciała i ducha',
-    copyright: '© 2024 VinhXuan. Wszelkie prawa zastrzeżone.',
+    copyright: '© 2024 Yuen Chai Wan Wing Chun. Wszelkie prawa zastrzeżone.',
 
     // Register Page
     registerTitle: 'Zapisz się na zajęcia',

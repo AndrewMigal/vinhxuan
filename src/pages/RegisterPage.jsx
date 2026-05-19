@@ -80,21 +80,21 @@ function RegisterPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-100">
+    <div className="min-h-screen bg-gray-100">
       <Header />
 
       <main className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-        <div className="bg-white rounded-2xl shadow-xl p-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">
+        <div className="bg-white rounded-2xl shadow-2xl p-8 border-4 border-black">
+          <h1 className="text-3xl font-bold text-black mb-2">
             {t('registerTitle')}
           </h1>
-          <p className="text-gray-600 mb-8">
+          <p className="text-gray-700 mb-8">
             {t('registerSubtitle')}
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="name" className="block text-sm font-medium text-black mb-2">
                 {t('name')} *
               </label>
               <input
@@ -104,12 +104,12 @@ function RegisterPage() {
                 required
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition"
+                className="w-full px-4 py-2 border-2 border-black rounded-lg focus:ring-2 focus:ring-gray-400 outline-none transition"
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="email" className="block text-sm font-medium text-black mb-2">
                 {t('email')} *
               </label>
               <input
@@ -119,13 +119,13 @@ function RegisterPage() {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition"
+                className="w-full px-4 py-2 border-2 border-black rounded-lg focus:ring-2 focus:ring-gray-400 outline-none transition"
                 placeholder="example@email.com"
               />
             </div>
 
             <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="phone" className="block text-sm font-medium text-black mb-2">
                 {t('phone')} *
               </label>
               <input
@@ -135,12 +135,12 @@ function RegisterPage() {
                 required
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition"
+                className="w-full px-4 py-2 border-2 border-black rounded-lg focus:ring-2 focus:ring-gray-400 outline-none transition"
               />
             </div>
 
             <div>
-              <label htmlFor="experience" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="experience" className="block text-sm font-medium text-black mb-2">
                 {t('experienceLevel')}
               </label>
               <select
@@ -148,7 +148,7 @@ function RegisterPage() {
                 name="experience"
                 value={formData.experience}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition"
+                className="w-full px-4 py-2 border-2 border-black rounded-lg focus:ring-2 focus:ring-gray-400 outline-none transition"
               >
                 <option value="beginner">{t('beginner')}</option>
                 <option value="intermediate">{t('intermediate')}</option>
@@ -157,7 +157,7 @@ function RegisterPage() {
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="message" className="block text-sm font-medium text-black mb-2">
                 {t('additionalInfo')}
               </label>
               <textarea
@@ -166,7 +166,7 @@ function RegisterPage() {
                 rows="4"
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition resize-none"
+                className="w-full px-4 py-2 border-2 border-black rounded-lg focus:ring-2 focus:ring-gray-400 outline-none transition resize-none"
               ></textarea>
             </div>
 
@@ -175,27 +175,27 @@ function RegisterPage() {
               disabled={isSubmitting}
               className={`w-full py-3 rounded-lg font-semibold transition-colors ${
                 isSubmitting
-                  ? 'bg-gray-400 cursor-not-allowed'
-                  : 'bg-indigo-600 hover:bg-indigo-700'
-              } text-white`}
+                  ? 'bg-gray-400 cursor-not-allowed text-white'
+                  : 'bg-black hover:bg-gray-800 text-white'
+              }`}
             >
               {isSubmitting ? '...' : t('submit')}
             </button>
 
             {/* Success Message */}
             {submitStatus === 'success' && (
-              <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
-                <p className="text-green-800 text-center">
-                  {t('successMessage')}
+              <div className="mt-4 p-4 bg-white border-2 border-black rounded-lg">
+                <p className="text-black text-center font-medium">
+                  ✓ {t('successMessage')}
                 </p>
               </div>
             )}
 
             {/* Error Message */}
             {submitStatus === 'error' && (
-              <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
-                <p className="text-red-800 text-center">
-                  {t('errorMessage')}
+              <div className="mt-4 p-4 bg-black border-2 border-black rounded-lg">
+                <p className="text-white text-center font-medium">
+                  ✗ {t('errorMessage')}
                 </p>
               </div>
             )}
