@@ -86,6 +86,7 @@ function HomePage() {
                 <Link
                   to="/register"
                   className="group relative px-8 py-4 bg-red-600 text-white font-semibold overflow-hidden transition-all duration-300 hover:scale-105"
+                  style={{ clipPath: 'polygon(0 0, 100% 0, 95% 100%, 0% 100%)' }}
                 >
                   <span className="relative z-10">{t('startTraining')}</span>
                   <div className="absolute inset-0 bg-red-700 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
