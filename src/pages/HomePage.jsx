@@ -279,41 +279,65 @@ function HomePage() {
       {/* Footer */}
       <footer className="relative bg-black border-t border-zinc-800 py-12 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h3
-              className="text-3xl font-bold mb-4"
-              style={{ fontFamily: '"Bebas Neue", sans-serif' }}
-            >
-              Yuen Chai Wan Wing Chun
-            </h3>
-            <p className="text-zinc-400 mb-4 max-w-md mx-auto">
-              {t('footerTagline')}
-            </p>
-
-            {/* Location */}
-            <div className="text-zinc-500 mb-8">
-              <p className="flex items-center justify-center gap-2">
-                <span>📍</span>
-                <span>{t('footerLocation')}</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+            {/* Left - About */}
+            <div className="text-center md:text-left">
+              <h3
+                className="text-3xl font-bold mb-4"
+                style={{ fontFamily: '"Bebas Neue", sans-serif' }}
+              >
+                Yuen Chai Wan Wing Chun
+              </h3>
+              <p className="text-zinc-400 mb-6">
+                {t('footerTagline')}
               </p>
+
+              <div className="flex justify-center md:justify-start gap-6">
+                {['YouTube', 'Facebook', 'Instagram'].map((social) => (
+                  <a
+                    key={social}
+                    href={`https://${social.toLowerCase()}.com`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-zinc-400 hover:text-red-500 transition-colors font-medium"
+                  >
+                    {social}
+                  </a>
+                ))}
+              </div>
             </div>
 
-            <div className="flex justify-center gap-8 mb-8">
-              {['YouTube', 'Facebook', 'Instagram'].map((social) => (
-                <a
-                  key={social}
-                  href={`https://${social.toLowerCase()}.com`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-zinc-400 hover:text-red-500 transition-colors font-medium"
-                >
-                  {social}
-                </a>
-              ))}
+            {/* Right - Contact */}
+            <div className="text-center md:text-right">
+              <h3
+                className="text-2xl font-bold mb-4 text-red-500"
+                style={{ fontFamily: '"Bebas Neue", sans-serif' }}
+              >
+                {t('contactTitle')}
+              </h3>
+              <div className="space-y-3 text-zinc-400">
+                <p className="flex items-center justify-center md:justify-end gap-2">
+                  <span>📍</span>
+                  <span>Nowosielecka 12, Warsaw, Poland</span>
+                </p>
+                <p className="flex items-center justify-center md:justify-end gap-2">
+                  <span>💬</span>
+                  <a
+                    href="https://wa.me/48732804026"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-red-500 transition-colors"
+                  >
+                    WhatsApp: +48 732 804 026
+                  </a>
+                </p>
+              </div>
             </div>
+          </div>
 
+          {/* Bottom - Copyright */}
+          <div className="text-center">
             <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-zinc-800 to-transparent mx-auto mb-6"></div>
-
             <p className="text-zinc-600 text-sm">
               {t('copyright')}
             </p>
