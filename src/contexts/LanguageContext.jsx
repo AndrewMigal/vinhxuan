@@ -11,10 +11,13 @@ export const translations = {
     register: 'Register',
 
     // Home Page Hero
-    welcomeTitle: 'Welcome to Yuen Chai Wan Wing Chun',
+    welcomeTitle: 'Welcome to Yuen Chai Wan Wing Chun Poland',
     welcomeSubtitle: 'Discover the ancient art of Yuen Chai Wan Wing Chun. Begin your journey to perfection of body and spirit.',
     startTraining: 'Start Training',
     learnMore: 'Learn More',
+
+    // About Section
+    aboutTitle: 'About Instructor',
 
     // Home Features
     traditions: 'Traditions',
@@ -57,6 +60,7 @@ export const translations = {
 
     // Footer
     footerTagline: 'The path to perfection of body and spirit',
+    footerLocation: 'Warsaw, Poland',
     copyright: '© 2024 Yuen Chai Wan Wing Chun. All rights reserved.',
 
     // Register Page
@@ -92,10 +96,13 @@ export const translations = {
     register: 'Zapisz się',
 
     // Home Page Hero
-    welcomeTitle: 'Witamy w Yuen Chai Wan Wing Chun',
+    welcomeTitle: 'Witamy w Yuen Chai Wan Wing Chun Polska',
     welcomeSubtitle: 'Odkryj starożytną sztukę Yuen Chai Wan Wing Chun. Rozpocznij swoją podróż do doskonałości ciała i ducha.',
     startTraining: 'Rozpocznij trening',
     learnMore: 'Dowiedz się więcej',
+
+    // About Section
+    aboutTitle: 'O Instruktorze',
 
     // Home Features
     traditions: 'Tradycje',
@@ -138,6 +145,7 @@ export const translations = {
 
     // Footer
     footerTagline: 'Droga do doskonałości ciała i ducha',
+    footerLocation: 'Warszawa, Polska',
     copyright: '© 2024 Yuen Chai Wan Wing Chun. Wszelkie prawa zastrzeżone.',
 
     // Register Page

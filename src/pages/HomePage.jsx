@@ -125,36 +125,48 @@ function HomePage() {
             </div>
           </div>
 
-          {/* Feature cards - Modern cards with depth */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20">
-            {[
-              { emoji: '🥋', title: t('traditions'), desc: t('traditionsDesc'), delay: '0ms' },
-              { emoji: '💪', title: t('strength'), desc: t('strengthDesc'), delay: '100ms' },
-              { emoji: '🧘', title: t('balance'), desc: t('balanceDesc'), delay: '200ms' }
-            ].map((card, idx) => (
-              <div
-                key={idx}
-                className="group relative bg-gradient-to-br from-zinc-900 to-zinc-950 p-8 border border-zinc-800 hover:border-red-600/50 transition-all duration-500 hover:-translate-y-2"
-                style={{
-                  animationDelay: card.delay,
-                  boxShadow: '0 10px 40px rgba(0,0,0,0.5)'
-                }}
-              >
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-600 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          {/* About Section */}
+          <div className="mt-20 bg-gradient-to-br from-zinc-900/80 to-zinc-950/80 backdrop-blur-sm border border-zinc-800 p-8 lg:p-12">
+            {/* Top accent line */}
+            <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-red-600 via-red-600/50 to-transparent"></div>
 
-                <div className="text-5xl mb-4 filter grayscale group-hover:grayscale-0 transition-all">
-                  {card.emoji}
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
+              {/* Photo placeholder */}
+              <div className="lg:col-span-2">
+                <div className="relative aspect-square bg-gradient-to-br from-zinc-800 to-zinc-900 border-2 border-zinc-700 flex items-center justify-center overflow-hidden">
+                  {/* Placeholder with icon */}
+                  <div className="text-center text-zinc-600">
+                    <div className="text-8xl mb-4">👤</div>
+                    <p className="text-sm">Photo placeholder</p>
+                  </div>
+                  {/* Decorative corner accent */}
+                  <div className="absolute top-0 right-0 w-0 h-0 border-t-[40px] border-t-red-600/20 border-l-[40px] border-l-transparent"></div>
+                  <div className="absolute bottom-0 left-0 w-0 h-0 border-b-[40px] border-b-red-600/20 border-r-[40px] border-r-transparent"></div>
                 </div>
-                <h3 className="text-2xl font-bold mb-3 text-white" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
-                  {card.title}
-                </h3>
-                <p className="text-zinc-400 leading-relaxed">
-                  {card.desc}
-                </p>
-
-                <div className="absolute bottom-0 right-0 w-20 h-20 bg-red-600/5 blur-2xl group-hover:bg-red-600/20 transition-all"></div>
               </div>
-            ))}
+
+              {/* Text content */}
+              <div className="lg:col-span-3 space-y-6">
+                <div>
+                  <div className="w-16 h-1 bg-red-600 mb-4"></div>
+                  <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
+                    {t('aboutTitle')}
+                  </h2>
+                </div>
+
+                <div className="space-y-4 text-zinc-300 text-lg leading-relaxed">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                  </p>
+                  <p>
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                  <blockquote className="border-l-4 border-red-600 pl-6 italic text-zinc-400 py-2">
+                    "Text placeholder - your quote here"
+                  </blockquote>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -274,9 +286,17 @@ function HomePage() {
             >
               Yuen Chai Wan Wing Chun
             </h3>
-            <p className="text-zinc-400 mb-8 max-w-md mx-auto">
+            <p className="text-zinc-400 mb-4 max-w-md mx-auto">
               {t('footerTagline')}
             </p>
+
+            {/* Location */}
+            <div className="text-zinc-500 mb-8">
+              <p className="flex items-center justify-center gap-2">
+                <span>📍</span>
+                <span>{t('footerLocation')}</span>
+              </p>
+            </div>
 
             <div className="flex justify-center gap-8 mb-8">
               {['YouTube', 'Facebook', 'Instagram'].map((social) => (
