@@ -1,10 +1,7 @@
 @import "tailwindcss";
 
-@theme {
-  --color-background: #FAFAFA;
-  --color-surface: #F5F5F5;
-  --color-accent: #0A0A0A;
-}
+/* Dark mode configuration for Tailwind v4 */
+@custom-variant dark (&:where(.dark, .dark *));
 
 /*@layer base {*/
 /*  body {*/

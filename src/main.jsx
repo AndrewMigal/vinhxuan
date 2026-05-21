@@ -5,6 +5,7 @@ import { Buffer } from 'buffer'
 import './index.css'
 import App from './App.jsx'
 import { LanguageProvider } from './contexts/LanguageContext'
+import { ThemeProvider } from './contexts/ThemeContext'
 
 // Polyfill Buffer для gray-matter
 window.Buffer = Buffer
@@ -12,9 +13,11 @@ window.Buffer = Buffer
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <LanguageProvider>
-        <App />
-      </LanguageProvider>
+      <ThemeProvider>
+        <LanguageProvider>
+          <App />
+        </LanguageProvider>
+      </ThemeProvider>
     </BrowserRouter>
   </StrictMode>,
 )
