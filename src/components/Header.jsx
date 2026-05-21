@@ -55,13 +55,13 @@ function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 text-zinc-900 dark:text-white hover:text-zinc-700 dark:hover:text-gray-300 transition-colors">
+          <Link to="/" className="flex items-center gap-2 text-zinc-900 dark:text-white hover:text-zinc-700 dark:hover:text-gray-300 transition-colors">
             <img
               src={theme === 'dark' ? logoBlack : logo}
               alt="Yuen Chai Wan Wing Chun Logo"
-              className="h-16 w-auto"
+              className="h-12 w-auto"
             />
-            <span className="text-2xl font-bold">Yuen Chai Wan Wing Chun</span>
+            <span className="text-xl font-bold hidden lg:block">Yuen Chai Wan Wing Chun</span>
           </Link>
 
           {/* Navigation Links */}
