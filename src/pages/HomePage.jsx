@@ -4,7 +4,7 @@ import { useLanguage } from '../contexts/LanguageContext'
 import { useState, useEffect } from 'react'
 
 function HomePage() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isLoaded, setIsLoaded] = useState(false)
 
@@ -154,16 +154,58 @@ function HomePage() {
                   </h2>
                 </div>
 
-                <div className="space-y-4 text-zinc-600 text-lg leading-relaxed">
+                <div className="space-y-4 text-zinc-600 dark:text-zinc-300 text-lg leading-relaxed">
+                  <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mb-2" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
+                    {language === 'pl' ? 'O instruktorze: Andrew Migal' : 'About the Instructor: Andrew Migal'}
+                  </h3>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                    {language === 'pl'
+                      ? 'Andrew Migal praktykuje sztuki i sporty walki od ponad 10 lat, w tym boks, muay thai, grappling oraz escrimę. Równolegle z treningami bojowymi spędził około 10 lat na studiowaniu medytacji buddyjskiej Therawada pod okiem doświadczonych instruktorów i mnichów, koncentrując się na uważności i dyscyplinie umysłu.'
+                      : 'Andrew Migal has been practicing martial arts and combat sports for over 10 years, including Boxing, Muay Thai, Grappling, and Escrima. Alongside his combat training, he spent about 10 years studying Theravada Buddhist meditation under the guidance of experienced instructors and monks, focusing on mindfulness and mental discipline.'
+                    }
+                  </p>
+
+                  <h4 className="text-xl font-bold text-zinc-900 dark:text-white mt-6 mb-2" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
+                    {language === 'pl' ? 'Odkrycie wewnętrznego Wing Chun' : 'Discovering Internal Wing Chun'}
+                  </h4>
+                  <p>
+                    {language === 'pl'
+                      ? 'Około ośmiu lat temu Andrew zetknął się z wewnętrznym Wing Chun, co całkowicie zmieniło jego perspektywę. Było to dla niego odkrycie — idealne połączenie funkcjonalnych sztuk walki, medytacji i koncentracji. Od tamtej pory wewnętrzne style kung-fu stały się jego głównym obszarem zainteresowań i pasją.'
+                      : 'About eight years ago, Andrew came across internal Wing Chun, and it completely changed his perspective. For him, it was a revelation—a perfect mix of functional martial arts, meditation, and concentration. Since then, internal Kung Fu styles have become his main interest and focus.'
+                    }
+                  </p>
+
+                  <h4 className="text-xl font-bold text-zinc-900 dark:text-white mt-6 mb-2" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
+                    {language === 'pl' ? 'Trening i linia przekazu' : 'Training and Lineage'}
+                  </h4>
+                  <p>
+                    {language === 'pl'
+                      ? 'Jego droga w sztukach wewnętrznych rozpoczęła się od wietnamskiej linii Wing Chun wywodzącej się od Yuen Chai-wana (Te Konga) z Hanoi, gdzie uczył się od uczniów mistrzów Trinh Quoc Dinha i Mai Anh Chau.'
+                      : 'His journey into the internal arts began with the Vietnamese Wing Chun lineage of Yuen Chai-wan (Te Kong) from Hanoi, learning from the followers of masters Trinh Quoc Dinh and Mai Anh Chau.'
+                    }
                   </p>
                   <p>
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    {language === 'pl'
+                      ? 'Chcąc lepiej zrozumieć mechanikę ruchu wewnętrznego, Andrew zgłębiał także inne style, takie jak Xingyi, Tongbei oraz I Liq Chuan. Podróżował do Azji Południowo-Wschodniej, aby rozwijać swoją praktykę, trenując z uczniami Trinh Quoc Dinha w Hanoi, gdzie z czasem zaczął również nauczać.'
+                      : 'Looking to understand internal movement better, Andrew also explored other styles like Xingyi, Tongbei, and I Liq Chuan. He traveled to Southeast Asia to deepen his practice, training with Trinh Quoc Dinh\'s students in Hanoi, where he eventually ended up teaching as well.'
+                    }
                   </p>
-                  <blockquote className="border-l-4 border-zinc-900 pl-6 italic text-zinc-500 py-2">
-                    "Text placeholder - your quote here"
-                  </blockquote>
+
+                  <h4 className="text-xl font-bold text-zinc-900 dark:text-white mt-6 mb-2" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
+                    {language === 'pl' ? 'Obecna praktyka' : 'Current Practice'}
+                  </h4>
+                  <p>
+                    {language === 'pl'
+                      ? 'Obecnie Andrew kontynuuje swój trening online, studiując linię przekazu Trần Thúc Tiển (jednego z najbliższych uczniów Te Konga) pod okiem mistrza z Australii.'
+                      : 'Currently, Andrew continues his training online, studying the lineage of Trần Thúc Tiển (one of Te Kong\'s closest disciples) under a master based in Australia.'
+                    }
+                  </p>
+                  <p>
+                    {language === 'pl'
+                      ? 'Poprzez swoje nauczanie dąży do dzielenia się tym starym, niezmodernizowanym stylem Wing Chun z Foshan, łącząc praktyczną mechanikę ciała z wewnętrznym skupieniem i uważnością.'
+                      : 'Through his teaching, he aims to share this old, unmodernized style of Foshan Wing Chun, combining practical body mechanics with internal focus and awareness.'
+                    }
+                  </p>
                 </div>
               </div>
             </div>
