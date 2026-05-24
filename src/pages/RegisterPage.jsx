@@ -115,9 +115,8 @@ function RegisterPage() {
               <div
                 className="text-9xl font-bold text-zinc-900/5 dark:text-red-600/5 select-none"
                 style={{
-                  fontFamily: 'serif',
-                  writingMode: 'vertical-rl',
-                  textOrientation: 'upright'
+                  fontFamily: "'Noto Serif SC', 'Noto Serif TC', 'Source Han Serif', serif",
+                  lineHeight: 1
                 }}
               >
                 修
@@ -341,7 +340,7 @@ function RegisterPage() {
       </main>
 
       <style jsx>{`
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif+SC:wght@700&display=swap');
 
         @keyframes fade-in {
           from {

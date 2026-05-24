@@ -103,14 +103,12 @@ function HomePage() {
                 <div className="absolute w-96 h-96 rounded-full border border-zinc-900/20 dark:border-red-600/20 animation-delay-400"></div>
 
                 {/* Center character */}
-                <div className="relative z-10">
+                <div className="relative z-10 flex items-center justify-center">
                   <div
                     className="text-9xl font-bold text-zinc-900 dark:text-red-600/10 select-none"
                     style={{
-                      fontFamily: 'serif',
-                      writingMode: 'vertical-rl',
-                      textOrientation: 'upright',
-                      letterSpacing: '0.5rem'
+                      fontFamily: "'Noto Serif SC', 'Noto Serif TC', 'Source Han Serif', serif",
+                      lineHeight: 1
                     }}
                   >
                     武
@@ -281,7 +279,7 @@ function HomePage() {
                         <div className={`h-full bg-gradient-to-br ${post.gradient}`}></div>
                         <div className="absolute inset-0 bg-zinc-900/0 group-hover:bg-zinc-900/20 transition-all duration-500"></div>
                         <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="text-8xl font-bold text-zinc-900 dark:text-white/5">武</div>
+                          <div className="text-8xl font-bold text-zinc-900 dark:text-white/5" style={{ fontFamily: "'Noto Serif SC', 'Noto Serif TC', 'Source Han Serif', serif", lineHeight: 1 }}>武</div>
                         </div>
                       </>
                     )}
@@ -366,7 +364,7 @@ function HomePage() {
       </footer>
 
       <style jsx>{`
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400;700&family=Noto+Serif+SC:wght@700&display=swap');
 
         @keyframes pulse {
           0%, 100% {

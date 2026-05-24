@@ -53,7 +53,7 @@ function BlogDetailPage() {
         <svg className="absolute top-20 right-0 w-96 h-96" viewBox="0 0 200 200">
           <path d="M10,100 Q50,20 100,40 T190,100" className="stroke-zinc-900 dark:stroke-red-600" strokeWidth="40" fill="none" strokeLinecap="round" opacity="0.2" />
         </svg>
-        <div className="absolute top-40 left-1/2 transform -translate-x-1/2 text-9xl font-bold text-zinc-900/5 dark:text-red-600/5 select-none" style={{fontFamily: 'serif'}}>武</div>
+        <div className="absolute top-40 left-1/2 transform -translate-x-1/2 text-9xl font-bold text-zinc-900/5 dark:text-red-600/5 select-none" style={{fontFamily: "'Noto Serif SC', 'Noto Serif TC', 'Source Han Serif', serif", lineHeight: 1}}>武</div>
       </div>
 
       <main className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
@@ -162,7 +162,7 @@ function BlogDetailPage() {
 
       {/* Fonts */}
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400;700&family=Noto+Serif+SC:wght@700&display=swap');
       `}</style>
     </div>
   )
