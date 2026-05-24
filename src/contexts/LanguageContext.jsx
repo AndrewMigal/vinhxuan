@@ -58,7 +58,7 @@ export const translations = {
     footerTagline: 'The path to perfection of body and spirit',
     footerLocation: 'Warsaw, Poland',
     contactTitle: 'Contact',
-    copyright: '© 2024 Yuen Chai Wan Wing Chun. All rights reserved.',
+    copyright: '© 2026 Yuen Chai Wan Wing Chun. All rights reserved.',
 
     // Register Page
     registerTitle: 'Register for Classes',
@@ -140,7 +140,7 @@ export const translations = {
     footerTagline: 'Droga do doskonałości ciała i ducha',
     footerLocation: 'Warszawa, Polska',
     contactTitle: 'Kontakt',
-    copyright: '© 2024 Yuen Chai Wan Wing Chun. Wszelkie prawa zastrzeżone.',
+    copyright: '© 2026 Yuen Chai Wan Wing Chun. Wszelkie prawa zastrzeżone.',
 
     // Register Page
     registerTitle: 'Zapisz się na zajęcia',
