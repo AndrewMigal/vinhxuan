@@ -262,11 +262,9 @@ function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="max-w-2xl mx-auto">
             {[
-              { slug: 'history-of-wing-chun', title: t('blogPost1Title'), desc: t('blogPost1Desc'), image: blogImage },
-              { slug: 'breathing-techniques', title: t('blogPost2Title'), desc: t('blogPost2Desc'), gradient: 'from-white to-zinc-50' },
-              { slug: 'philosophy-of-martial-arts', title: t('blogPost3Title'), desc: t('blogPost3Desc'), gradient: 'from-white to-zinc-50' }
+              { slug: 'history-of-wing-chun', title: t('blogPost1Title'), desc: t('blogPost1Desc'), image: blogImage }
             ].map((post, idx) => (
               <Link
                 key={idx}

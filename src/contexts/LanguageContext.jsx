@@ -52,10 +52,6 @@ export const translations = {
     blogTitle: 'Blog',
     blogPost1Title: 'Story of Yuen Chai Wan',
     blogPost1Desc: 'The fascinating journey of Yuen Chai-wan (Te Kong) from Foshan to Vietnam, founding patriarch of Vietnamese Wing Chun.',
-    blogPost2Title: 'Breathing Techniques',
-    blogPost2Desc: 'Proper breathing is the foundation of effective practice. Study the basic techniques and exercises.',
-    blogPost3Title: 'Philosophy of Martial Arts',
-    blogPost3Desc: 'Martial arts are not just physical practice, but also a path of spiritual development.',
     readMore: 'Read more →',
 
     // Footer
@@ -138,10 +134,6 @@ export const translations = {
     blogTitle: 'Blog',
     blogPost1Title: 'Historia Yuen Chai Wan',
     blogPost1Desc: 'Fascynująca historia Yuen Chai-wana (Te Konga) z Foshan do Wietnamu, patriarchy-założyciela wietnamskiego Wing Chun.',
-    blogPost2Title: 'Techniki Oddychania',
-    blogPost2Desc: 'Prawidłowe oddychanie jest podstawą efektywnej praktyki. Poznaj podstawowe techniki i ćwiczenia.',
-    blogPost3Title: 'Filozofia Sztuk Walki',
-    blogPost3Desc: 'Sztuki walki to nie tylko praktyka fizyczna, ale także droga rozwoju duchowego.',
     readMore: 'Czytaj dalej →',
 
     // Footer
