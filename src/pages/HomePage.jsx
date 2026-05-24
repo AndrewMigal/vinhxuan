@@ -83,20 +83,14 @@ function HomePage() {
                 {t('welcomeSubtitle')}
               </p>
 
-              <div className="flex gap-4 pt-4">
+              <div className="pt-4">
                 <Link
                   to="/register"
-                  className="group relative px-8 py-4 bg-zinc-900 dark:bg-red-600 text-white font-semibold overflow-hidden transition-all duration-300 hover:scale-105"
+                  className="group relative inline-block px-8 py-4 bg-zinc-900 dark:bg-red-600 text-white font-semibold overflow-hidden transition-all duration-300 hover:scale-105"
                 >
                   <span className="relative z-10">{t('startTraining')}</span>
                   <div className="absolute inset-0 bg-zinc-800 dark:bg-red-700 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
                 </Link>
-
-                <button
-                  className="px-8 py-4 bg-transparent border-2 border-zinc-900 dark:border-red-600 text-zinc-900 dark:text-white hover:bg-zinc-900 dark:hover:bg-red-600 hover:text-white font-semibold transition-all duration-300"
-                >
-                  {t('learnMore')}
-                </button>
               </div>
             </div>
 
