@@ -50,8 +50,8 @@ export const translations = {
 
     // Blog Section
     blogTitle: 'Blog',
-    blogPost1Title: 'History of Wing Chun',
-    blogPost1Desc: 'Learn about the ancient roots and development of Wing Chun martial arts over the centuries.',
+    blogPost1Title: 'Story of Yuen Chai Wan',
+    blogPost1Desc: 'The fascinating journey of Yuen Chai-wan (Te Kong) from Foshan to Vietnam, founding patriarch of Vietnamese Wing Chun.',
     blogPost2Title: 'Breathing Techniques',
     blogPost2Desc: 'Proper breathing is the foundation of effective practice. Study the basic techniques and exercises.',
     blogPost3Title: 'Philosophy of Martial Arts',
@@ -136,8 +136,8 @@ export const translations = {
 
     // Blog Section
     blogTitle: 'Blog',
-    blogPost1Title: 'Historia Wing Chun',
-    blogPost1Desc: 'Dowiedz się o starożytnych korzeniach i rozwoju Wing Chun na przestrzeni wieków.',
+    blogPost1Title: 'Historia Yuen Chai Wan',
+    blogPost1Desc: 'Fascynująca historia Yuen Chai-wana (Te Konga) z Foshan do Wietnamu, patriarchy-założyciela wietnamskiego Wing Chun.',
     blogPost2Title: 'Techniki Oddychania',
     blogPost2Desc: 'Prawidłowe oddychanie jest podstawą efektywnej praktyki. Poznaj podstawowe techniki i ćwiczenia.',
     blogPost3Title: 'Filozofia Sztuk Walki',
@@ -178,7 +178,7 @@ export const translations = {
 }
 
 export function LanguageProvider({ children }) {
-  const [language, setLanguage] = useState('en')
+  const [language, setLanguage] = useState('pl')
 
   const t = (key) => {
     return translations[language][key] || key

@@ -81,17 +81,14 @@ function Header() {
             </button>
 
             {/* Social Media Links */}
-            <a
-              href="https://youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-zinc-600 dark:text-gray-300 hover:text-zinc-900 dark:hover:text-white transition-colors font-medium"
+            <span
+              className="text-zinc-400 dark:text-gray-500 font-medium cursor-default"
             >
               YouTube
-            </a>
+            </span>
 
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/WingChunBielskoBiala"
               target="_blank"
               rel="noopener noreferrer"
               className="text-zinc-600 dark:text-gray-300 hover:text-zinc-900 dark:hover:text-white transition-colors font-medium"
@@ -100,7 +97,7 @@ function Header() {
             </a>
 
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/vietwingchun/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-zinc-600 dark:text-gray-300 hover:text-zinc-900 dark:hover:text-white transition-colors font-medium"

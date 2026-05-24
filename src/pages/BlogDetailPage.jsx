@@ -6,6 +6,7 @@ import Header from '../components/Header'
 import { useLanguage } from '../contexts/LanguageContext'
 import { blogPosts, blogPostsOrder } from '../data/blog'
 import { parseMarkdown, getNextPrevArticles } from '../utils/markdownParser'
+import blogImage from '../assets/images.jpeg'
 
 function BlogDetailPage() {
   const { slug } = useParams()
@@ -86,6 +87,17 @@ function BlogDetailPage() {
               <span className="text-zinc-700 dark:text-zinc-300">{frontmatter.category}</span>
             </div>
           </header>
+
+          {/* Featured Image - только для статьи history-of-wing-chun */}
+          {slug === 'history-of-wing-chun' && (
+            <div className="mb-12 -mx-8 lg:-mx-12">
+              <img
+                src={blogImage}
+                alt={t(frontmatter.titleKey)}
+                className="w-full h-auto max-h-[500px] object-cover"
+              />
+            </div>
+          )}
 
           {/* Article Content - Styled Markdown */}
           <div className="prose prose-invert max-w-none">

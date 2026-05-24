@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Header from '../components/Header'
 import { useLanguage } from '../contexts/LanguageContext'
 import { useState, useEffect } from 'react'
+import blogImage from '../assets/images.jpeg'
 
 function HomePage() {
   const { t, language } = useLanguage()
@@ -126,89 +127,71 @@ function HomePage() {
           </div>
 
           {/* About Section */}
-          <div className="mt-20 bg-white dark:bg-zinc-900 shadow-lg dark:shadow-zinc-800 border border-zinc-200 dark:border-zinc-800 p-8 lg:p-12">
+          <div className="mt-20 bg-white dark:bg-zinc-900 shadow-lg dark:shadow-zinc-800 border border-zinc-200 dark:border-zinc-800 p-8 lg:p-12 relative">
             {/* Top accent line */}
-            <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-zinc-900 via-zinc-900/50 to-transparent"></div>
+            <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-zinc-900 dark:from-red-600 via-zinc-900/50 dark:via-red-600/50 to-transparent"></div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
-              {/* Photo placeholder */}
-              <div className="lg:col-span-2">
-                <div className="relative aspect-square bg-gradient-to-br from-zinc-100 to-zinc-200 border-2 border-zinc-300 dark:border-zinc-700 flex items-center justify-center overflow-hidden">
-                  {/* Placeholder with icon */}
-                  <div className="text-center text-zinc-400">
-                    <div className="text-8xl mb-4">👤</div>
-                    <p className="text-sm">Photo placeholder</p>
-                  </div>
-                  {/* Decorative corner accent */}
-                  <div className="absolute top-0 right-0 w-0 h-0 border-t-[40px] border-t-zinc-900/20 dark:border-t-red-600/20 border-l-[40px] border-l-transparent"></div>
-                  <div className="absolute bottom-0 left-0 w-0 h-0 border-b-[40px] border-b-zinc-900/20 dark:border-b-red-600/20 border-r-[40px] border-r-transparent"></div>
-                </div>
+            <div className="space-y-6">
+              <div>
+                <div className="w-16 h-1 bg-zinc-900 dark:bg-red-600 mb-4"></div>
+                <h2 className="text-4xl lg:text-5xl font-bold text-zinc-900 dark:text-white mb-4" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
+                  {t('aboutTitle')}
+                </h2>
               </div>
 
-              {/* Text content */}
-              <div className="lg:col-span-3 space-y-6">
-                <div>
-                  <div className="w-16 h-1 bg-zinc-900 dark:bg-red-600 mb-4"></div>
-                  <h2 className="text-4xl lg:text-5xl font-bold text-zinc-900 dark:text-white mb-4" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
-                    {t('aboutTitle')}
-                  </h2>
-                </div>
+              <div className="space-y-4 text-zinc-600 dark:text-zinc-300 text-lg leading-relaxed">
+                <p>
+                  {language === 'pl'
+                    ? 'Andrew Migal praktykuje sztuki i sporty walki od ponad 10 lat, w tym boks, muay thai, grappling oraz escrimę. Równolegle z treningami bojowymi spędził około 10 lat na studiowaniu medytacji buddyjskiej Therawada pod okiem doświadczonych instruktorów i mnichów, koncentrując się na uważności i dyscyplinie umysłu.'
+                    : 'Andrew Migal has been practicing martial arts and combat sports for over 10 years, including Boxing, Muay Thai, Grappling, and Escrima. Alongside his combat training, he spent about 10 years studying Theravada Buddhist meditation under the guidance of experienced instructors and monks, focusing on mindfulness and mental discipline.'
+                  }
+                </p>
 
-                <div className="space-y-4 text-zinc-600 dark:text-zinc-300 text-lg leading-relaxed">
-                  <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mb-2" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
-                    {language === 'pl' ? 'O instruktorze: Andrew Migal' : 'About the Instructor: Andrew Migal'}
-                  </h3>
-                  <p>
-                    {language === 'pl'
-                      ? 'Andrew Migal praktykuje sztuki i sporty walki od ponad 10 lat, w tym boks, muay thai, grappling oraz escrimę. Równolegle z treningami bojowymi spędził około 10 lat na studiowaniu medytacji buddyjskiej Therawada pod okiem doświadczonych instruktorów i mnichów, koncentrując się na uważności i dyscyplinie umysłu.'
-                      : 'Andrew Migal has been practicing martial arts and combat sports for over 10 years, including Boxing, Muay Thai, Grappling, and Escrima. Alongside his combat training, he spent about 10 years studying Theravada Buddhist meditation under the guidance of experienced instructors and monks, focusing on mindfulness and mental discipline.'
-                    }
-                  </p>
+                <h4 className="text-xl font-bold text-zinc-900 dark:text-white mt-6 mb-2" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
+                  {language === 'pl' ? 'Odkrycie wewnętrznego Wing Chun' : 'Discovering Internal Wing Chun'}
+                </h4>
+                <p>
+                  {language === 'pl'
+                    ? 'Około ośmiu lat temu Andrew zetknął się z wewnętrznym Wing Chun, co całkowicie zmieniło jego perspektywę. Było to dla niego odkrycie — idealne połączenie funkcjonalnych sztuk walki, medytacji i koncentracji. Od tamtej pory wewnętrzne style kung-fu stały się jego głównym obszarem zainteresowań i pasją.'
+                    : 'About eight years ago, Andrew came across internal Wing Chun, and it completely changed his perspective. For him, it was a revelation—a perfect mix of functional martial arts, meditation, and concentration. Since then, internal Kung Fu styles have become his main interest and focus.'
+                  }
+                </p>
 
-                  <h4 className="text-xl font-bold text-zinc-900 dark:text-white mt-6 mb-2" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
-                    {language === 'pl' ? 'Odkrycie wewnętrznego Wing Chun' : 'Discovering Internal Wing Chun'}
-                  </h4>
-                  <p>
-                    {language === 'pl'
-                      ? 'Około ośmiu lat temu Andrew zetknął się z wewnętrznym Wing Chun, co całkowicie zmieniło jego perspektywę. Było to dla niego odkrycie — idealne połączenie funkcjonalnych sztuk walki, medytacji i koncentracji. Od tamtej pory wewnętrzne style kung-fu stały się jego głównym obszarem zainteresowań i pasją.'
-                      : 'About eight years ago, Andrew came across internal Wing Chun, and it completely changed his perspective. For him, it was a revelation—a perfect mix of functional martial arts, meditation, and concentration. Since then, internal Kung Fu styles have become his main interest and focus.'
-                    }
-                  </p>
+                <h4 className="text-xl font-bold text-zinc-900 dark:text-white mt-6 mb-2" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
+                  {language === 'pl' ? 'Trening i linia przekazu' : 'Training and Lineage'}
+                </h4>
+                <p>
+                  {language === 'pl'
+                    ? 'Jego droga w sztukach wewnętrznych rozpoczęła się od wietnamskiej linii Wing Chun wywodzącej się od Yuen Chai-wana (Te Konga) z Hanoi, gdzie uczył się od uczniów mistrzów Trinh Quoc Dinha i Mai Anh Chau.'
+                    : 'His journey into the internal arts began with the Vietnamese Wing Chun lineage of Yuen Chai-wan (Te Kong) from Hanoi, learning from the followers of masters Trinh Quoc Dinh and Mai Anh Chau.'
+                  }
+                </p>
+                <p>
+                  {language === 'pl'
+                    ? 'Chcąc lepiej zrozumieć mechanikę ruchu wewnętrznego, Andrew zgłębiał także inne style, takie jak Xingyi, Tongbei oraz I Liq Chuan. Podróżował do Azji Południowo-Wschodniej, aby rozwijać swoją praktykę, trenując z uczniami Trinh Quoc Dinha w Hanoi, gdzie z czasem zaczął również nauczać.'
+                    : 'Looking to understand internal movement better, Andrew also explored other styles like Xingyi, Tongbei, and I Liq Chuan. He traveled to Southeast Asia to deepen his practice, training with Trinh Quoc Dinh\'s students in Hanoi, where he eventually ended up teaching as well.'
+                  }
+                </p>
 
-                  <h4 className="text-xl font-bold text-zinc-900 dark:text-white mt-6 mb-2" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
-                    {language === 'pl' ? 'Trening i linia przekazu' : 'Training and Lineage'}
-                  </h4>
-                  <p>
-                    {language === 'pl'
-                      ? 'Jego droga w sztukach wewnętrznych rozpoczęła się od wietnamskiej linii Wing Chun wywodzącej się od Yuen Chai-wana (Te Konga) z Hanoi, gdzie uczył się od uczniów mistrzów Trinh Quoc Dinha i Mai Anh Chau.'
-                      : 'His journey into the internal arts began with the Vietnamese Wing Chun lineage of Yuen Chai-wan (Te Kong) from Hanoi, learning from the followers of masters Trinh Quoc Dinh and Mai Anh Chau.'
-                    }
-                  </p>
-                  <p>
-                    {language === 'pl'
-                      ? 'Chcąc lepiej zrozumieć mechanikę ruchu wewnętrznego, Andrew zgłębiał także inne style, takie jak Xingyi, Tongbei oraz I Liq Chuan. Podróżował do Azji Południowo-Wschodniej, aby rozwijać swoją praktykę, trenując z uczniami Trinh Quoc Dinha w Hanoi, gdzie z czasem zaczął również nauczać.'
-                      : 'Looking to understand internal movement better, Andrew also explored other styles like Xingyi, Tongbei, and I Liq Chuan. He traveled to Southeast Asia to deepen his practice, training with Trinh Quoc Dinh\'s students in Hanoi, where he eventually ended up teaching as well.'
-                    }
-                  </p>
-
-                  <h4 className="text-xl font-bold text-zinc-900 dark:text-white mt-6 mb-2" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
-                    {language === 'pl' ? 'Obecna praktyka' : 'Current Practice'}
-                  </h4>
-                  <p>
-                    {language === 'pl'
-                      ? 'Obecnie Andrew kontynuuje swój trening online, studiując linię przekazu Trần Thúc Tiển (jednego z najbliższych uczniów Te Konga) pod okiem mistrza z Australii.'
-                      : 'Currently, Andrew continues his training online, studying the lineage of Trần Thúc Tiển (one of Te Kong\'s closest disciples) under a master based in Australia.'
-                    }
-                  </p>
-                  <p>
-                    {language === 'pl'
-                      ? 'Poprzez swoje nauczanie dąży do dzielenia się tym starym, niezmodernizowanym stylem Wing Chun z Foshan, łącząc praktyczną mechanikę ciała z wewnętrznym skupieniem i uważnością.'
-                      : 'Through his teaching, he aims to share this old, unmodernized style of Foshan Wing Chun, combining practical body mechanics with internal focus and awareness.'
-                    }
-                  </p>
-                </div>
+                <h4 className="text-xl font-bold text-zinc-900 dark:text-white mt-6 mb-2" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
+                  {language === 'pl' ? 'Obecna praktyka' : 'Current Practice'}
+                </h4>
+                <p>
+                  {language === 'pl'
+                    ? 'Obecnie Andrew kontynuuje swój trening online, studiując linię przekazu Trần Thúc Tiển (jednego z najbliższych uczniów Te Konga) pod okiem mistrza z Australii.'
+                    : 'Currently, Andrew continues his training online, studying the lineage of Trần Thúc Tiển (one of Te Kong\'s closest disciples) under a master based in Australia.'
+                  }
+                </p>
+                <p>
+                  {language === 'pl'
+                    ? 'Poprzez swoje nauczanie dąży do dzielenia się tym starym, niezmodernizowanym stylem Wing Chun z Foshan, łącząc praktyczną mechanikę ciała z wewnętrznym skupieniem i uważnością.'
+                    : 'Through his teaching, he aims to share this old, unmodernized style of Foshan Wing Chun, combining practical body mechanics with internal focus and awareness.'
+                  }
+                </p>
               </div>
             </div>
+            {/* Corner accent */}
+            <div className="absolute bottom-0 right-0 w-0 h-0 border-b-[60px] border-b-zinc-900/20 dark:border-b-red-600/20 border-l-[60px] border-l-transparent"></div>
           </div>
         </div>
       </section>
@@ -226,37 +209,37 @@ function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {[
-              { title: t('groupClasses'), desc: t('groupClassesDesc'), price: t('groupClassesPrice') },
-              { title: t('privateClasses'), desc: t('privateClassesDesc'), price: t('privateClassesPrice') },
-              { title: t('kidsGroups'), desc: t('kidsGroupsDesc'), price: t('kidsGroupsPrice') },
-              { title: t('masterClasses'), desc: t('masterClassesDesc'), price: t('masterClassesPrice') },
-              { title: t('sparring'), desc: t('sparringDesc'), price: t('sparringPrice') },
-              { title: t('onlineLearning'), desc: t('onlineLearningDesc'), price: t('onlineLearningPrice') }
+              {
+                title: t('privateClasses'),
+                desc: t('privateClassesDesc')
+              },
+              {
+                title: t('masterClasses'),
+                desc: language === 'pl'
+                  ? 'Prowadzę zajęcia grupowe dla szkół, klubów i organizacji. Intensywne warsztaty z podstaw Wing Chun, filozofii i praktycznych technik walki.'
+                  : 'I conduct group sessions for schools, clubs, and organizations. Intensive workshops covering Wing Chun fundamentals, philosophy, and practical combat techniques.'
+              }
             ].map((service, idx) => (
               <div
                 key={idx}
-                className="group relative bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-md dark:shadow-zinc-800 p-6 hover:border-zinc-900 dark:hover:border-red-600 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-all duration-300 overflow-hidden"
+                className="group relative bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-md dark:shadow-zinc-800 p-8 hover:border-zinc-900 dark:hover:border-red-600 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-all duration-300 overflow-hidden"
               >
                 {/* Hover effect background */}
                 <div className="absolute inset-0 bg-gradient-to-br from-zinc-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
                 <div className="relative z-10">
                   <div className="flex items-start justify-between mb-4">
-                    <h3 className="text-2xl font-bold text-zinc-900 dark:text-white" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
+                    <h3 className="text-3xl font-bold text-zinc-900 dark:text-white" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
                       {service.title}
                     </h3>
                     <div className="w-8 h-0.5 bg-zinc-900 dark:bg-red-600 group-hover:w-12 transition-all"></div>
                   </div>
 
-                  <p className="text-zinc-600 mb-6 leading-relaxed min-h-[80px]">
+                  <p className="text-zinc-600 dark:text-zinc-300 text-lg leading-relaxed">
                     {service.desc}
                   </p>
-
-                  <div className="pt-4 border-t border-zinc-200">
-                    <p className="text-lg font-semibold text-zinc-700">{service.price}</p>
-                  </div>
                 </div>
 
                 {/* Corner accent */}
@@ -281,7 +264,7 @@ function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { slug: 'history-of-wing-chun', title: t('blogPost1Title'), desc: t('blogPost1Desc'), gradient: 'from-white to-zinc-50' },
+              { slug: 'history-of-wing-chun', title: t('blogPost1Title'), desc: t('blogPost1Desc'), image: blogImage },
               { slug: 'breathing-techniques', title: t('blogPost2Title'), desc: t('blogPost2Desc'), gradient: 'from-white to-zinc-50' },
               { slug: 'philosophy-of-martial-arts', title: t('blogPost3Title'), desc: t('blogPost3Desc'), gradient: 'from-white to-zinc-50' }
             ].map((post, idx) => (
@@ -291,12 +274,25 @@ function HomePage() {
                 className="block group bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-md dark:shadow-zinc-800 overflow-hidden hover:border-zinc-900 dark:hover:border-red-600 transition-all duration-300 hover:-translate-y-2 cursor-pointer"
               >
                 <article>
-                  <div className={`h-56 bg-gradient-to-br ${post.gradient} relative overflow-hidden`}>
-                    {/* Decorative overlay */}
-                    <div className="absolute inset-0 bg-zinc-900/0 group-hover:bg-zinc-900/20 transition-all duration-500"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-8xl font-bold text-zinc-900 dark:text-white/5">武</div>
-                    </div>
+                  <div className="h-56 relative overflow-hidden">
+                    {post.image ? (
+                      <>
+                        <img
+                          src={post.image}
+                          alt={post.title}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-zinc-900/0 group-hover:bg-zinc-900/30 transition-all duration-500"></div>
+                      </>
+                    ) : (
+                      <>
+                        <div className={`h-full bg-gradient-to-br ${post.gradient}`}></div>
+                        <div className="absolute inset-0 bg-zinc-900/0 group-hover:bg-zinc-900/20 transition-all duration-500"></div>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="text-8xl font-bold text-zinc-900 dark:text-white/5">武</div>
+                        </div>
+                      </>
+                    )}
                   </div>
 
                   <div className="p-6">
@@ -325,28 +321,14 @@ function HomePage() {
             {/* Left - About */}
             <div className="text-center md:text-left">
               <h3
-                className="text-3xl font-bold mb-4"
+                className="text-3xl font-bold mb-4 text-zinc-900 dark:text-white"
                 style={{ fontFamily: '"Bebas Neue", sans-serif' }}
               >
                 Yuen Chai Wan Wing Chun
               </h3>
-              <p className="text-zinc-600 mb-6">
+              <p className="text-zinc-600 dark:text-zinc-300">
                 {t('footerTagline')}
               </p>
-
-              <div className="flex justify-center md:justify-start gap-6">
-                {['YouTube', 'Facebook', 'Instagram'].map((social) => (
-                  <a
-                    key={social}
-                    href={`https://${social.toLowerCase()}.com`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-zinc-600 hover:text-zinc-700 transition-colors font-medium"
-                  >
-                    {social}
-                  </a>
-                ))}
-              </div>
             </div>
 
             {/* Right - Contact */}
