@@ -1,0 +1,6 @@
+# Разрешаем всем поисковым роботам индексировать весь сайт
+User-agent: *
+Allow: /
+
+# Указываем путь к карте сайта
+Sitemap: https://vinhxuan.pl/sitemap.xml
