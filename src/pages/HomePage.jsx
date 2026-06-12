@@ -139,7 +139,7 @@ function HomePage() {
                   }
                 </p>
 
-                <h4 className="text-xl font-bold text-zinc-900 dark:text-white mt-6 mb-2" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
+                <h4 className="text-xl font-medium text-zinc-900 dark:text-white mt-6 mb-2 tracking-wider" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
                   {language === 'pl' ? 'Odkrycie wewnętrznego Wing Chun' : 'Discovering Internal Wing Chun'}
                 </h4>
                 <p>
@@ -149,7 +149,7 @@ function HomePage() {
                   }
                 </p>
 
-                <h4 className="text-xl font-bold text-zinc-900 dark:text-white mt-6 mb-2" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
+                <h4 className="text-xl font-medium text-zinc-900 dark:text-white mt-6 mb-2 tracking-wider" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
                   {language === 'pl' ? 'Trening i linia przekazu' : 'Training and Lineage'}
                 </h4>
                 <p>
@@ -165,7 +165,7 @@ function HomePage() {
                   }
                 </p>
 
-                <h4 className="text-xl font-bold text-zinc-900 dark:text-white mt-6 mb-2" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
+                <h4 className="text-xl font-medium text-zinc-900 dark:text-white mt-6 mb-2 tracking-wider" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
                   {language === 'pl' ? 'Obecna praktyka' : 'Current Practice'}
                 </h4>
                 <p>
