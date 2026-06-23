@@ -58,7 +58,7 @@ function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/95 dark:bg-black/90 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800 shadow-sm z-50">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="max-w-7xl mx-auto px-4 lg:px-0">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 text-zinc-900 dark:text-white hover:text-zinc-700 dark:hover:text-gray-300 transition-colors">
