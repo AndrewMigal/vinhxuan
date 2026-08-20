@@ -7,7 +7,7 @@ authorEn: Andrew Migal
 authorPl: Andrew Migal
 excerptKey: blogPost2Desc
 readTime: 12
-category: Philosophy
+category: History
 image: /src/assets/ipman_tecong.jpg
 ---
 
