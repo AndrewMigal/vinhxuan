@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import { useLanguage } from '../contexts/LanguageContext'
 import { useState, useEffect } from 'react'
 import blogImage from '../assets/images.jpeg'
+import twoPathsImage from '../assets/ipman_tecong.jpg'
 
 function HomePage() {
   const { t, language } = useLanguage()
@@ -254,9 +255,10 @@ function HomePage() {
             </h2>
           </div>
 
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-2xl mx-auto flex flex-col gap-8">
             {[
-              { slug: 'history-of-wing-chun', title: t('blogPost1Title'), desc: t('blogPost1Desc'), image: blogImage }
+              { slug: 'history-of-wing-chun', title: t('blogPost1Title'), desc: t('blogPost1Desc'), image: blogImage },
+              { slug: 'two-paths-of-one-art', title: t('blogPost2Title'), desc: t('blogPost2Desc'), image: twoPathsImage },
             ].map((post, idx) => (
               <Link
                 key={idx}

@@ -7,6 +7,12 @@ import { useLanguage } from '../contexts/LanguageContext'
 import { blogPosts, blogPostsOrder } from '../data/blog'
 import { parseMarkdown, getNextPrevArticles } from '../utils/markdownParser'
 import blogImage from '../assets/images.jpeg'
+import twoPathsImage from '../assets/ipman_tecong.jpg'
+
+const articleImages = {
+  'history-of-wing-chun': blogImage,
+  'two-paths-of-one-art': twoPathsImage,
+}
 
 function BlogDetailPage() {
   const { slug } = useParams()
@@ -88,11 +94,11 @@ function BlogDetailPage() {
             </div>
           </header>
 
-          {/* Featured Image - только для статьи history-of-wing-chun */}
-          {slug === 'history-of-wing-chun' && (
+          {/* Featured Image */}
+          {articleImages[slug] && (
             <div className="mb-12 -mx-8 lg:-mx-12">
               <img
-                src={blogImage}
+                src={articleImages[slug]}
                 alt={t(frontmatter.titleKey)}
                 className="w-full h-auto max-h-[500px] object-cover"
               />
@@ -119,6 +125,11 @@ function BlogDetailPage() {
                   <code className="bg-zinc-100 dark:bg-zinc-800 px-2 py-1 rounded text-zinc-900 dark:text-white text-sm" {...props} /> :
                   <code className="block bg-zinc-50 dark:bg-zinc-900 p-4 rounded border border-zinc-200 dark:border-zinc-700 text-sm my-6 overflow-x-auto" {...props} />,
                 a: ({node, ...props}) => <a className="text-zinc-700 dark:text-zinc-300 underline hover:text-zinc-600 dark:hover:text-zinc-100 transition-colors" {...props} />,
+                table: ({node, ...props}) => <div className="overflow-x-auto my-8"><table className="w-full border-collapse text-sm" {...props} /></div>,
+                thead: ({node, ...props}) => <thead className="bg-zinc-100 dark:bg-zinc-800" {...props} />,
+                th: ({node, ...props}) => <th className="border border-zinc-300 dark:border-zinc-700 px-4 py-3 text-left font-bold text-zinc-900 dark:text-white" style={{fontFamily: 'Bebas Neue'}} {...props} />,
+                td: ({node, ...props}) => <td className="border border-zinc-300 dark:border-zinc-700 px-4 py-3 text-zinc-700 dark:text-zinc-300 align-top" {...props} />,
+                tr: ({node, ...props}) => <tr className="even:bg-zinc-50 dark:even:bg-zinc-800/40" {...props} />,
               }}
               remarkPlugins={[remarkGfm]}
             >

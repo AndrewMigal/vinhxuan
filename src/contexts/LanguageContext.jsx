@@ -52,6 +52,8 @@ export const translations = {
     blogTitle: 'Blog',
     blogPost1Title: 'Story of Yuen Chai Wan',
     blogPost1Desc: 'The fascinating journey of Yuen Chai-wan (Te Kong) from Foshan to Vietnam, founding patriarch of Vietnamese Wing Chun.',
+    blogPost2Title: 'Two Paths of One Art',
+    blogPost2Desc: 'Why do Vietnamese and Hong Kong Wing Chun feel so different? A deep comparison of the Te Kong and Ip Man lineages — from private mansions to global academies.',
     readMore: 'Read more →',
 
     // Footer
@@ -134,6 +136,8 @@ export const translations = {
     blogTitle: 'Blog',
     blogPost1Title: 'Historia Yuen Chai Wan',
     blogPost1Desc: 'Fascynująca historia Yuen Chai-wana (Te Konga) z Foshan do Wietnamu, patriarchy-założyciela wietnamskiego Wing Chun.',
+    blogPost2Title: 'Dwie Drogi Jednej Sztuki',
+    blogPost2Desc: 'Dlaczego wietnamskie i hongkońskie Wing Chun tak bardzo się różnią? Głębokie porównanie linii Te Konga i Ip Mana — od prywatnych posiadłości po globalne akademie.',
     readMore: 'Czytaj dalej →',
 
     // Footer
