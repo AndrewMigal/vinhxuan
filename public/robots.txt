@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Указываем путь к карте сайта
-Sitemap: https://vinhxuan.pl/sitemap.xml
+Sitemap: https://www.tecong.pl/sitemap.xml
